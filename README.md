@@ -58,6 +58,18 @@ This project implements and compares various neural network models for detecting
 | 5 (Logistic Regression) | liblinear (L1)      | L1 Penalty                     | N/A            | N/A                   | N/A    | 95.00%     | 0.020     | **0.950** | 0.040    | N/A              |
 
 
+## 🏗️ Model Architectures
+
+| Instance                | Architecture Description             | Number of Layers |
+|-------------------------|--------------------------------------|------------------|
+| 1 (Baseline)            | 3 Dense layers (64 → 32 → 1)         | 3                |
+| 2                       | 4 Dense layers (128 → 64 → 32 → 1)   | 4                |
+| 3                       | 4 Dense layers (128 → 64 → 32 → 1) + Dropout (30%) | 4                |
+| 4                       | 4 Dense layers (128 → 64 → 32 → 1) + L1 (λ=0.001) + Dropout (30%) | 4                |
+| 5 (Logistic Regression) | No hidden layers (linear classifier) | 0                |
+
+
+
 #### Test Set Performance (Best Model - Instance 4)
 - **Accuracy**: 99.01%
 - **Precision**: 8.60%
