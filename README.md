@@ -181,16 +181,4 @@ The final model provides a solid foundation for a production fraud detection sys
 
 ---
 
-**Project Structure**:
-```
-fraud_detection_project/
-├── fraud.csv                          # Dataset
-├── fraud_detection_analysis.ipynb     # Main notebook
-├── saved_models/                      # Trained models
-├── model_architectures/               # Architecture diagrams
-└── README.md                          # This file
-```
 
-**Author**: [Your Name]  
-**Date**: June 2025  
-**Course**: Machine Learning Optimization Techniques
