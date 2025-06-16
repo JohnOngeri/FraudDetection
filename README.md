@@ -1,5 +1,3 @@
-# FraudDetection
-
 # Fraud Detection in Mobile Money Transactions
 ## Machine Learning Models with Optimization Techniques
 
