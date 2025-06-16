@@ -154,8 +154,7 @@ All trained models saved in `saved_models/` directory:
 
 #### 1. Advanced Techniques
 - **Ensemble Methods**: Combine multiple models for better performance
-- **Cost-Sensitive Learning**: Assign different misclassification costs
-- **Threshold Optimization**: Tune decision threshold for business requirements
+- - **Threshold Optimization**: Tune decision threshold for business requirements
 
 #### 2. Feature Engineering
 - **Temporal Features**: Transaction patterns over time
@@ -164,8 +163,7 @@ All trained models saved in `saved_models/` directory:
 
 #### 3. Model Monitoring
 - **Drift Detection**: Monitor for changes in transaction patterns
-- **A/B Testing**: Compare model versions in production
-- **Feedback Loop**: Incorporate fraud analyst feedback
+- - **Feedback Loop**: Incorporate fraud analyst feedback
 
 ### Conclusion
 
