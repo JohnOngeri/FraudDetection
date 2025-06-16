@@ -55,15 +55,16 @@ This project implements and compares various neural network models for detecting
 | 3 | 4 Dense layers (128-64-32-1) | Adam | Dropout (0.3) | 0.0003 | 12 | Yes (patience=5) |
 | 4 | 4 Dense layers (128-64-32-1) | SGD | L1 (0.001) + Dropout (0.3) | 0.01 | 15 | Yes (patience=5) |
 
-### Results Summary
-📊 Performance Comparison Table
-Instance	Optimizer	Regularization	Learning Rate	Early Stopping	Epochs	Accuracy	Precision	Recall	F1-Score	Validation Loss
-1 (Baseline)	Adam (default)	None	0.001	No	10	99.02%	0.093	0.930	0.170	0.0287
-2	RMSprop	L2 (λ=0.01)	0.0005	Yes (patience=5)	20	99.00%	0.088	0.877	0.160	0.0800
-3	Adam	Dropout (30%)	0.0003	Yes (patience=5)	12	99.11%	0.102	0.917	0.183	0.0318
-4	SGD	L1 (λ=0.001) + Dropout (30%)	0.01	Yes (patience=5)	15	99.74%	0.264	0.759	0.392	0.0893
-5 (Logistic Regression)	liblinear (L1)	L1 Penalty	N/A	N/A	N/A	95.00%	0.020	0.950	0.040	N/A
-(Best-performing metrics in bold)
+## 📊 Performance Comparison Table
+
+| Instance                | Optimizer           | Regularization                 | Learning Rate | Early Stopping       | Epochs | Accuracy   | Precision | Recall  | F1-Score | Validation Loss |
+|-------------------------|---------------------|--------------------------------|----------------|-----------------------|--------|------------|-----------|---------|----------|------------------|
+| 1 (Baseline)            | Adam (default)      | None                           | 0.001          | No                    | 10     | 99.02%     | 0.093     | 0.930   | 0.170    | 0.0287           |
+| 2                       | RMSprop             | L2 (λ=0.01)                    | 0.0005         | Yes (patience=5)      | 20     | 99.00%     | 0.088     | 0.877   | 0.160    | 0.0800           |
+| 3                       | Adam                | Dropout (30%)                  | 0.0003         | Yes (patience=5)      | 12     | **99.11%** | 0.102     | **0.917** | **0.183** | 0.0318           |
+| 4                       | SGD                 | L1 (λ=0.001) + Dropout (30%)   | 0.01           | Yes (patience=5)      | 15     | **99.74%** | **0.264** | 0.759   | **0.392** | 0.0893           |
+| 5 (Logistic Regression) | liblinear (L1)      | L1 Penalty                     | N/A            | N/A                   | N/A    | 95.00%     | 0.020     | **0.950** | 0.040    | N/A              |
+
 
 #### Test Set Performance (Best Model - Instance 4)
 - **Accuracy**: 99.01%
