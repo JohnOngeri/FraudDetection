@@ -46,14 +46,6 @@ This project implements and compares various neural network models for detecting
 - **StandardScaler** applied to normalize all features
 - Fitted on training data, applied to validation and test sets
 
-### Model Architecture Comparison
-
-| Instance | Architecture | Optimizer | Regularization | Learning Rate | Epochs | Early Stopping |
-|----------|--------------|-----------|----------------|---------------|---------|----------------|
-| 1 (Baseline) | 3 Dense layers (64-32-1) | Adam (default) | None | 0.001 | 10 | No |
-| 2 | 4 Dense layers (128-64-32-1) | RMSprop | L2 (0.01) | 0.0005 | 20 | Yes (patience=5) |
-| 3 | 4 Dense layers (128-64-32-1) | Adam | Dropout (0.3) | 0.0003 | 12 | Yes (patience=5) |
-| 4 | 4 Dense layers (128-64-32-1) | SGD | L1 (0.001) + Dropout (0.3) | 0.01 | 15 | Yes (patience=5) |
 
 ## 📊 Performance Comparison Table
 
