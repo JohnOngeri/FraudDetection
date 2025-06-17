@@ -180,83 +180,84 @@ This project successfully demonstrates the impact of optimization and regulariza
 The final model provides a solid foundation for a production fraud detection system, with clear paths for future enhancement and monitoring.
 
 **---
-FraudDetection/
-├── fraud.csv # Dataset
-├── Summative_Intro_to_ml_John_Ongeri_Ouma_assignment.ipynb
-├── saved_models/
-│ ├── logistic_regression_model.pkl
-│ ├── nn_instance1_basic.keras
-│ ├── nn_instance2_optimized.keras
-│ ├── nn_instance3_optimized.keras
-│ └── nn_instance4_optimized.keras <-- ✅ Best model
-├── model_architectures/
-│ └── *.png # Model architecture visualizations
-└── README.md
+## 🧠 Fraud Detection using Neural Networks & Optimization Techniques
 
-yaml
-Copy
-Edit
+This project aims to detect fraudulent mobile money transactions using neural networks and various optimization techniques. The dataset is sourced from PaySim, a mobile money simulator. We explore how different combinations of optimizers, regularization, dropout, and early stopping affect model performance.
 
 ---
 
-## 🚀 How to Run the Notebook
+### 📁 Project Structure
 
-1. **Install required dependencies**:
-   ```bash
-   pip install -r requirements.txt
-Open the notebook:
+```
+FraudDetection/
+│
+├── fraud.csv                         # Dataset
+├── saved_models/                     # Folder with all saved Keras and sklearn models
+│   ├── logistic_regression_model.pkl
+│   ├── nn_instance1_basic.keras
+│   ├── nn_instance2_optimized.keras
+│   ├── nn_instance3_optimized.keras
+│   └── nn_instance4_optimized.keras
+├── model_architectures/              # Folder with model architecture images (optional)
+│   ├── Instance1_Basic_Neural_Network_architecture.png
+│   └── ...
+├── Summative_Intro_to_ml_[YourName].ipynb  # Main notebook
+├── README.md
+└── requirements.txt                  # Optional: list of packages
+```
 
-Launch Jupyter Notebook or VSCode, and open:
+---
 
-Copy
-Edit
-Summative_Intro_to_ml_John_Ongeri_Ouma_assignment.ipynb
-Run the notebook cells step-by-step to:
+### 📊 Best Model
 
-Load the dataset
+✅ **Instance 4** was the best-performing model with the highest F1-Score:
 
-Preprocess and balance the data
-
-Train baseline and optimized models
-
-Evaluate models using F1-score, precision, recall, ROC, and confusion matrix
-
-Visualize model architectures
-
-🏆 Best Model (Instance 4)
-The best-performing model is:
-
-Instance 4: Neural Network using SGD, L1 Regularization, and Dropout
-
-✅ F1-Score: 0.3918
-
-📍 Saved at:
-
-bash
-Copy
-Edit
+-
+Saved as:  
+```bash
 saved_models/nn_instance4_optimized.keras
-📦 How to Load the Best Model & Make Predictions
-python
-Copy
-Edit
+```
+
+---
+
+### ▶️ How to Run the Notebook
+
+1. Clone the repo or open the notebook in Google Colab:
+
+```bash
+https://github.com/JohnOngeri/FraudDetection.git
+```
+
+2. Open the notebook `Summative_Intro_to_ml_[John Ongeri Ouma].ipynb`.
+
+3. Run all cells sequentially, starting from data preprocessing to model training.
+
+---
+
+### 🧪 Making Predictions with the Best Model
+
+To load and make predictions using the best saved model:
+
+```python
 from tensorflow.keras.models import load_model
 import numpy as np
 
-# Load the model
+# Load the best model (Instance 4)
 model = load_model('saved_models/nn_instance4_optimized.keras')
 
-# Predict on preprocessed test set (replace X_test_scaled with your actual data)
-y_pred = (model.predict(X_test_scaled) > 0.5).astype("int32")
-📈 Evaluation Metrics Used
-Accuracy
+# Predict on test set
+y_pred = (model.predict(X_test_scaled) > 0.5).astype('int32')
+```
 
-Precision
+---
 
-Recall
 
-F1 Score
+- If you're visualizing model architectures, install Graphviz and ensure it’s in your system PATH.
 
-Confusion Matrix
+---
 
-ROC AUC
+### 🙌 Author
+
+- **John Ongeri Ouma**  
+  [GitHub](https://github.com/JohnOngeri) | j.ouma@alustudent.com
+
