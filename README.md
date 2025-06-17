@@ -180,13 +180,7 @@ This project successfully demonstrates the impact of optimization and regulariza
 The final model provides a solid foundation for a production fraud detection system, with clear paths for future enhancement and monitoring.
 
 **---
-## 🧠 Fraud Detection using Neural Networks & Optimization Techniques
 
-This project aims to detect fraudulent mobile money transactions using neural networks and various optimization techniques. The dataset is sourced from PaySim, a mobile money simulator. We explore how different combinations of optimizers, regularization, dropout, and early stopping affect model performance.
-
----
-
-### 📁 Project Structure
 
 ```
 FraudDetection/
