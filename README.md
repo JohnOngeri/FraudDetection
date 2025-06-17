@@ -195,9 +195,9 @@ FraudDetection/
 ├── model_architectures/              # Folder with model architecture images (optional)
 │   ├── Instance1_Basic_Neural_Network_architecture.png
 │   └── ...
-├── Summative_Intro_to_ml_[YourName].ipynb  # Main notebook
+├── Summative_Intro_to_ml_[John Ongeri Ouma].ipynb  # Main notebook
 ├── README.md
-└── requirements.txt                  # Optional: list of packages
+└── 
 ```
 
 ---
