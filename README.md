@@ -179,6 +179,64 @@ This project successfully demonstrates the impact of optimization and regulariza
 
 The final model provides a solid foundation for a production fraud detection system, with clear paths for future enhancement and monitoring.
 
----
+**---
+Running the Notebook**
+Start Jupyter:
 
+bash
+jupyter notebook
+Open Fraud_Detection_Optimization.ipynb
+
+Run cells sequentially:
+
+Kernel > Restart & Run All
+
+🏆 Using the Best Model (Instance 4)
+The optimal model combines:
+
+SGD optimizer
+
+L1 regularization
+
+Dropout (30%)
+
+Loading the Model:
+python
+from tensorflow.keras.models import load_model
+import numpy as np
+
+# Load pre-trained model
+model = load_model('saved_models/nn_instance4_optimized.keras')
+
+# Example prediction (with optimal threshold=0.3)
+sample = np.array([[1, 500.0, 1000.0, 500.0, 0.0, 0.0, 0, 0, 1, 0, 0]])  # Sample transaction
+scaled_sample = scaler.transform(sample)  # Use same scaler from notebook
+prob = model.predict(scaled_sample)[0][0]
+prediction = "Fraud" if prob > 0.3 else "Legitimate"
+
+print(f"Fraud Probability: {prob:.2%} → {prediction}")
+📊 Expected Results
+Metric	Value
+Accuracy	99.74%
+Precision	26.4%
+Recall	75.9%
+F1-Score	0.39
+False Positives	493
+🚨 Troubleshooting
+Memory Errors:
+
+Reduce batch size in notebook (set batch_size=32 instead of 64)
+
+Use Google Colab Pro for larger GPU memory
+
+Model Loading Issues:
+
+bash
+# Reinstall TensorFlow if compatibility errors occur
+pip install --upgrade tensorflow
+Dataset Path:
+
+Ensure fraud.csv is in the project root
+
+Or update path in notebook's first cell
 
