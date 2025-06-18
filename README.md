@@ -6,10 +6,14 @@ This project implements and compares various neural network models for detecting
 
 ### Dataset Description
 ## Dataset & Resources
-- **Kaggle Dataset (Fraud Detection in Mobile Transactions):**  
-  [Download here](https://www.kaggle.com/code/romaszurban/fraud-detection-in-mobile-transactions/input)  
-- **My Video Explanation:**  
-  [Watch here](https://drive.google.com/file/d/159njkY_Thbt2gF95J8iWttz8XeEwVh/view?usp=sharing)
+
+### Fraud Detection Dataset (Kaggle)
+Download the dataset here:  
+[https://www.kaggle.com/code/tomaszurban/fraud-detection-in-mobile-transactions/input](https://www.kaggle.com/code/tomaszurban/fraud-detection-in-mobile-transactions/input)
+
+### Video Explanation (Google Drive)
+Watch my project video here:  
+[https://drive.google.com/file/d/1S9hjkY_Tbhd2gF95J88Wttz8IXeEwVih/view?usp=sharing](https://drive.google.com/file/d/1S9hjkY_Tbhd2gF95J88Wttz8IXeEwVih/view?usp=sharing)
 
 **Problem Statement**: Binary classification to predict whether a mobile money transaction is fraudulent or legitimate.
 
